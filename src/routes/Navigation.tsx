@@ -1,8 +1,8 @@
 /**
  * Main navigation of the app
  */
-import { Suspense } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Suspense, useState } from 'react';
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 import { routes } from './routes';
@@ -10,16 +10,17 @@ import { useSelector } from 'react-redux';
 import { AuthReducerStateI } from '../reducers/authReducer';
 import { AppState } from '../store/store';
 import { Roles } from '../models/Roles';
-
+import { NavBar } from '../components/common/NavBar';
 
 export const Navigation = () => {
 
     const authState: AuthReducerStateI = useSelector((state: AppState) => state.auth);
 
     return (
-      <>
+      <div className='w-screen h-screen flex flex-col overflow-hidden'>
         <Suspense fallback={<span>Cargando...</span>}>
           <BrowserRouter>
+            <NavBar />
             <Routes>
               {
                 routes.map(({path, allowedRoles, loginRequired, Component}) => {
@@ -35,6 +36,6 @@ export const Navigation = () => {
             </Routes>
           </BrowserRouter>
         </Suspense>
-      </>
+      </div>
     )
   }

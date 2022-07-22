@@ -5,7 +5,7 @@ module.exports = {
   ],
   theme: {
     colors: {
-      primary: '#ED8E22',
+      primary: '#031D32',
       primaryDark: '#c97329',
       primaryLight: '#e88f4e',
       primaryDropShadow: '#EA7C69',
@@ -21,7 +21,9 @@ module.exports = {
       formBG: '#2D303E',
       white: '#FFFFFF',
       black: '#000000',
-      textLight: '#ABBBC2'
+      textLight: '#ABBBC2',
+      facebook: '#3B5998',
+      google: '#DB4437'
     },
     extend: {},
   },

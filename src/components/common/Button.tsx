@@ -36,8 +36,8 @@ export enum State {
  * Create the map of the types of variants it's styles
  */
 const VARIANT_MAPS: Record<Variant, string> = {
-  [Variant.PRIMARY]: 'text-white shadow-lg shadow-primary/30',
-  [Variant.SECONDARY]: 'border bg-transparent text-primary ',
+  [Variant.PRIMARY]: 'text-white',
+  [Variant.SECONDARY]: 'bg-transparent text-primary ',
   [Variant.DANGER]: 'text-white shadow-lg shadow-red/30'
 }
 
@@ -54,8 +54,8 @@ const VARIANT_ICON_MAPS: Record<Variant, string> = {
  * Create the map of the types of sizes and it's types
  */
 const SIZE_MAPS: Record<Size, string> = {
-  [Size.SMALL]: 'text-sm p-1 space-x-0.5',
-  [Size.MEDIUM]: 'text-base p-2 space-x-2',
+  [Size.SMALL]: 'text-xs p-1 space-x-0.5',
+  [Size.MEDIUM]: 'text-sm p-2 space-x-2 py-4',
   [Size.LARGE]: 'text-xl p-3 space-x-3 px-11 font-semibold',
   [Size.XLARGE]: 'text-2xl py-4 px-12 space-x-5 font-semibold',
   [Size.FULL]: 'text-xl w-full py-3'
@@ -71,8 +71,8 @@ const LOADING_STYLES = 'animate-spin w-6 text-white text-center ml-3';
  */
 const DISABLE_PRIMARY_STYLES = 'bg-primaryLight cursor-not-allowed';
 const ENABLE_PRIMARY_STYLES = 'bg-primary hover:bg-primaryDark';
-const DISABLE_SECONDARY_STYLES = 'cursor-not-allowed border-primaryLight bg-transparent';
-const ENABLE_SECONDARY_STYLES = 'border-primary bg-transparent';
+const DISABLE_SECONDARY_STYLES = 'cursor-not-allowed bg-transparent';
+const ENABLE_SECONDARY_STYLES = 'bg-transparent';
 const DISABLE_DANGER_STYLES = 'bg-redLight cursor-not-allowed';
 const ENABLE_DANGER_STYLES = 'bg-red hover:bg-primaryDark';
 

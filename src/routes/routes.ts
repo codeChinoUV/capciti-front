@@ -34,6 +34,7 @@ export interface RouteI {
    * The allowed roles for the route
    */
   allowedRoles?: Roles[];
+  showInNavbar: boolean;
 }
 
 export const routes: RouteI[] = [
@@ -43,6 +44,7 @@ export const routes: RouteI[] = [
     name: 'Login',
     loginRequired: false,
     Component: LoginScreen,
+    showInNavbar: false,
   },
   {
     to: '/home',
@@ -50,6 +52,7 @@ export const routes: RouteI[] = [
     name: 'Home',
     loginRequired: true,
     Component: HomeScreen,
-    allowedRoles: [ Roles.ALL ]
+    allowedRoles: [ Roles.ALL ],
+    showInNavbar: true
   },
 ]

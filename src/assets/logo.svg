@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="1565.521 5663.442 729.244 237.961" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+    <defs>
+        <style>@font-face { font-family: "Interstate Mono"; font-variant: normal; font-style: normal; font-weight: 50; }</style>
+        <style>.str3 { stroke: red; stroke-width: 11.67; stroke-miterlimit: 2.61313; }.fil1 { fill: red; }.fnt1 { font-weight: 50; font-size: 10rem; font-family: "Interstate Mono"; }</style>
+    </defs>
+    <g id="Capa_x0020_1" transform="matrix(1, 0, 0, 1, 149.9599, 105.85405)">
+        <g id="_2604343735808">
+            <text style="fill: rgb(3, 29, 50); font-family: &quot;Interstate Mono&quot;; font-size: 158px; font-weight: 50; stroke: rgb(3, 29, 50); stroke-miterlimit: 2.61313; stroke-width: 6px; white-space: pre;"><tspan style="font-weight: 700; letter-spacing: 6.9px; stroke-width: 1px;" x="1436.55" y="5749.18">capac </tspan><tspan>t</tspan></text>
+            <text class="fil1 str3 fnt1" style="stroke-width: 8px; white-space: pre; font-size: 160px;" x="1920.67" y="5752.32">i</text>
+            <text class="fil1 str3 fnt1" style="stroke-width: 8px; white-space: pre; font-size: 160px;" x="2041.68" y="5754.85">i</text>
+            <path class="str3" d="M 2046.927 5623.875 C 2046.927 5601.014 2025.234 5582.468 1998.49 5582.468 C 1971.746 5582.468 1950.053 5601.014 1950.053 5623.875 L 1933.908 5623.875 C 1933.908 5593.392 1962.832 5568.666 1998.49 5568.666 C 2034.149 5568.666 2063.072 5593.392 2063.072 5623.875 L 2046.927 5623.875 Z" style="fill: red; fill-rule: nonzero; stroke-width: 6px;"/>
+        </g>
+    </g>
+</svg>

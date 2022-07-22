@@ -4,7 +4,7 @@ import { classNames } from '../../utils/styles';
 
 const VARIANT_MAPS_BUTTON: Record<Variant, string> = {
   [Variant.PRIMARY]: 'bg-primary',
-  [Variant.SECONDARY]: 'bg-transparent',
+  [Variant.SECONDARY]: 'bg-white',
   [Variant.DANGER]: 'bg-red'
 }
 
@@ -32,7 +32,7 @@ interface IconButtonPropsI {
 
 export const IconButton = ({icon: Icon, onClick, variant = Variant.PRIMARY, size = Size.MEDIUM, state = State.ACTIVE}: IconButtonPropsI) => {
   return (
-    <button className={classNames('flex items-center rounded-md text-center border border-primary',
+    <button className={classNames('flex items-center rounded-xl text-center',
       VARIANT_MAPS_BUTTON[variant])} onClick={onClick} disabled={state === State.DISABLE}>
       {<Icon className={classNames(SIZE_MAPS[size], VARIANT_MAPS_ICON[variant])}/>}
     </button>

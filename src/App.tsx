@@ -4,7 +4,7 @@ import { Navigation } from './routes/Navigation';
 
 function App() {
   return (
-    <div className="App bg-darkBg1 max-w-screen-xl m-auto">
+    <div className="App h-screen">
       <Provider store={store}>
         <Navigation/>
       </Provider>
