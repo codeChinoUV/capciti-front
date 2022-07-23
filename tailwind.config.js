@@ -23,7 +23,9 @@ module.exports = {
       black: '#000000',
       textLight: '#ABBBC2',
       facebook: '#3B5998',
-      google: '#DB4437'
+      facebookDisable: '#CDD2D6',
+      google: '#DB4437',
+      success: '#00B374'
     },
     extend: {},
   },

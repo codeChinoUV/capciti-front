@@ -5,13 +5,15 @@ import { classNames } from '../../utils/styles';
 const VARIANT_MAPS_BUTTON: Record<Variant, string> = {
   [Variant.PRIMARY]: 'bg-primary',
   [Variant.SECONDARY]: 'bg-white',
-  [Variant.DANGER]: 'bg-red'
+  [Variant.DANGER]: 'bg-red',
+  [Variant.SUCCESS]: 'bg-success'
 }
 
 const VARIANT_MAPS_ICON: Record<Variant, string> = {
   [Variant.PRIMARY]: 'text-white',
   [Variant.SECONDARY]: 'text-primary',
-  [Variant.DANGER]: 'text-white'
+  [Variant.DANGER]: 'text-white',
+  [Variant.SUCCESS]: 'text-white'
 }
 
 const SIZE_MAPS: Record<Size, string> = {

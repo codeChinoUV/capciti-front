@@ -1,5 +1,6 @@
-import { State } from './Button';
-import { GrGoogle } from 'react-icons/gr';
+import {State} from './Button';
+import {GrGoogle} from 'react-icons/gr';
+import {classNames} from "../../utils/styles";
 
 /**
  * Properties for the button component
@@ -17,9 +18,10 @@ interface IButtonProps {
 const LOADING_STYLES = 'animate-spin w-6 text-white text-center ml-3';
 
 
-export const GoogleBtn = ({onClick, state, isLoading}: IButtonProps) => {
+export const GoogleBtn = ({onClick, state = State.ACTIVE, isLoading}: IButtonProps) => {
   return (
-    <button className='flex items-center rounded-md no-underline text-center text-xl w-full py-3 bg-google'
+    <button className={classNames('flex items-center rounded-md no-underline text-center text-xl w-full py-3',
+      state === State.ACTIVE ? 'bg-google' : 'bg-facebookDisable')}
             disabled={state === State.DISABLE || isLoading}
             onClick={onClick}>
 

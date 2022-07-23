@@ -10,7 +10,8 @@ import { classNames } from '../../utils/styles';
 export enum Variant {
   PRIMARY,
   SECONDARY,
-  DANGER
+  DANGER,
+  SUCCESS
 }
 
 /**
@@ -37,6 +38,7 @@ export enum State {
  */
 const VARIANT_MAPS: Record<Variant, string> = {
   [Variant.PRIMARY]: 'text-white',
+  [Variant.SUCCESS]: 'bg-success text-white',
   [Variant.SECONDARY]: 'bg-transparent text-primary ',
   [Variant.DANGER]: 'text-white shadow-lg shadow-red/30'
 }
@@ -47,6 +49,7 @@ const VARIANT_MAPS: Record<Variant, string> = {
 const VARIANT_ICON_MAPS: Record<Variant, string> = {
   [Variant.PRIMARY]: 'text-white',
   [Variant.SECONDARY]: 'text-primary',
+  [Variant.SUCCESS]: 'text-white',
   [Variant.DANGER]: 'text-white',
 }
 

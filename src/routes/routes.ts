@@ -6,6 +6,7 @@ import { LazyExoticComponent } from 'react';
 import { LoginScreen } from '../components/login/LoginScreen';
 import { HomeScreen } from '../components/home/HomeScreen';
 import { Roles } from '../models/Roles';
+import {RegisterScreen} from "../components/register/RegisterScreen";
 
 type JSXElement = () => JSX.Element;
 
@@ -46,6 +47,15 @@ export const routes: RouteI[] = [
     Component: LoginScreen,
     showInNavbar: false,
   },
+  {
+    to: '/register',
+    path: 'register',
+    name: 'Register',
+    loginRequired: false,
+    Component: RegisterScreen,
+    showInNavbar: false,
+  },
+
   {
     to: '/home',
     path: 'home/*',

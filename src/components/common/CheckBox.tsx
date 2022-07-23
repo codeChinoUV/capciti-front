@@ -14,7 +14,7 @@ interface CheckBoxPropsI {
 
 const MAPS_SIZE: Record<Size, string> = {
   [Size.LARGE]: 'text-2xl',
-  [Size.MEDIUM]: 'text-base',
+  [Size.MEDIUM]: 'text-sm',
   [Size.SMALL]: 'text-sm'
 }
 
@@ -33,8 +33,9 @@ const MAPS_CHECK_BOX_CHECKED: Record<Size, string> = {
 export const CheckBox = ({name, text, checked, onCheck, size = Size.SMALL}: CheckBoxPropsI) => {
   return (
     <div className="flex items-center">
-      <div className={classNames('transition duration-150 ease-in flex flex-shrink-0 justify-center items-center mr-2 ',
-        MAPS_CHECK_BOX[size], checked ? 'bg-primary' : 'bg-darkLine')}
+      <div className={classNames('transition duration-150 ease-in flex flex-shrink-0 justify-center items-center ' +
+        'mr-6 border-2 border-primary',
+        MAPS_CHECK_BOX[size], checked ? 'bg-primary' : 'bg-white')}
            onClick={onCheck}>
         <svg
           className={classNames('fill-current pointer-events-none', MAPS_CHECK_BOX_CHECKED[size], checked ? '' : 'hidden')}
@@ -49,7 +50,7 @@ export const CheckBox = ({name, text, checked, onCheck, size = Size.SMALL}: Chec
           </g>
         </svg>
       </div>
-      <label htmlFor={name} className={classNames('select-none text-white text-sm', MAPS_SIZE[size])}>{text}</label>
+      <label htmlFor={name} className={classNames('select-none text-primary', MAPS_SIZE[size])}>{text}</label>
       <input name={name} type="checkbox" checked={checked} onChange={onCheck} className="opacity-0 absolute h-8 w-8"/>
     </div>
   )

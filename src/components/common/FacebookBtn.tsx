@@ -1,5 +1,6 @@
-import { State } from './Button';
-import { FaFacebookSquare } from 'react-icons/fa';
+import {State} from './Button';
+import {FaFacebookSquare} from 'react-icons/fa';
+import {classNames} from "../../utils/styles";
 
 /**
  * Properties for the button component
@@ -17,9 +18,10 @@ interface IButtonProps {
 const LOADING_STYLES = 'animate-spin w-6 text-white text-center ml-3';
 
 
-export const FacebookBtn = ({onClick, state, isLoading}: IButtonProps) => {
+export const FacebookBtn = ({onClick, state = State.ACTIVE, isLoading}: IButtonProps) => {
   return (
-    <button className='flex items-center rounded-md no-underline text-center text-xl w-full py-3 bg-facebook'
+    <button className={classNames('flex items-center rounded-md no-underline text-center text-xl w-full py-3',
+      state === State.ACTIVE ? 'bg-facebook' : 'bg-facebookDisable')}
             disabled={state === State.DISABLE || isLoading}
             onClick={onClick}>
 
