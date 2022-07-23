@@ -1,12 +1,15 @@
-import {LoginMain} from "../login/component/LoginMain";
+import {LoginMain} from "./component/LoginMain";
 import {useState} from "react";
-import {LoginFacebookDetails} from "../login/component/LoginFacebookDetails";
-import {LoginGoogleDetails} from "../login/component/LoginGoogleDetails";
-import {SuccessRegister} from "../login/component/SuccessRegister";
+import {LoginFacebookDetails} from "./component/LoginFacebookDetails";
+import {LoginGoogleDetails} from "./component/LoginGoogleDetails";
+import {SuccessRegister} from "./component/SuccessRegister";
+import {useNavigate} from "react-router-dom";
 
 type steps = "main" | "facebookDetails" | "googleDetails" | "success"
 
 export const RegisterScreen = () => {
+
+  const navigate = useNavigate();
 
   const [currentStep, setCurrentStep] = useState<steps>("main")
 
@@ -22,12 +25,16 @@ export const RegisterScreen = () => {
     setCurrentStep("success")
   }
 
+  const onClose = () => {
+    navigate('/')
+  }
+
   const getCurrentStep = (step: steps) => {
     const loginSteps: Record<string, JSX.Element> = {
-      "main": (<LoginMain onGoogleLogin={onGoogleLogin} onFacebookLogin={onFacebookLogin} onClose={() => {}} />),
-      "facebookDetails": (<LoginFacebookDetails onSuccessLogin={onSuccessLogin} />),
-      "googleDetails": (<LoginGoogleDetails onSuccessLogin={onSuccessLogin} />),
-      "success": (<SuccessRegister />)
+      "main": (<LoginMain onGoogleLogin={onGoogleLogin} onFacebookLogin={onFacebookLogin} onClose={onClose} />),
+      "facebookDetails": (<LoginFacebookDetails onSuccessLogin={onSuccessLogin} onClose={onClose} />),
+      "googleDetails": (<LoginGoogleDetails onSuccessLogin={onSuccessLogin} onClose={onClose} />),
+      "success": (<SuccessRegister onClose={onClose} />)
     }
 
     return loginSteps[step]

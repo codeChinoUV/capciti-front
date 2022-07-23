@@ -1,15 +1,15 @@
-import {FacebookBtn} from "../../common/FacebookBtn";
-import {Button, State, Variant} from "../../common/Button";
-import {CheckBox} from "../../common/CheckBox";
 import {useState} from "react";
+import {CheckBox} from "../../common/CheckBox";
 import {Size} from "../../common/TextInput";
+import {Button, State, Variant} from "../../common/Button";
+import {GoogleBtn} from "../../common/GoogleBtn";
 
 interface LoginFacebookDetailsPropsI {
   onSuccessLogin: () => void;
+  onClose: () => void;
 }
 
-export const LoginFacebookDetails = ({onSuccessLogin}: LoginFacebookDetailsPropsI) => {
-
+export const LoginGoogleDetails = ({onSuccessLogin, onClose}: LoginFacebookDetailsPropsI) => {
   const [acceptConditions, setAcceptCondition] = useState(false);
 
   return (
@@ -27,10 +27,10 @@ export const LoginFacebookDetails = ({onSuccessLogin}: LoginFacebookDetailsProps
                   text='Estoy de acuerdo que la información de mi cuenta sea usada y relacionada con mi perfil. Confirmo para continuar.' />
       </div>
       <div className='flex flex-col gap-4'>
-        <FacebookBtn onClick={onSuccessLogin}
+        <GoogleBtn onClick={onSuccessLogin}
                      isLoading={false}
                      state={acceptConditions ? State.ACTIVE : State.DISABLE}/>
-        <Button onClick={() => {}} text='Cerrar' variant={Variant.SECONDARY} />
+        <Button onClick={onClose} text='Cerrar' variant={Variant.SECONDARY} />
       </div>
     </div>
   )

@@ -93,10 +93,10 @@ interface TextInputPropsI {
  * Styles for the elements of the text input
  */
 const stylesInput = {
-  label: 'text-white mb-2',
+  label: 'text-primary mb-2',
   icon: 'text-primary absolute',
   inputWitIcon: 'pl-12',
-  input: 'bg-formBG text-white rounded-lg focus:outline-none border border-darkLine focus:border-primary focus:border'
+  input: 'bg-gray text-primary shadow-soft rounded-lg focus:outline-none focus:border-primary focus:border'
 }
 
 export const TextInput = ({

@@ -5,14 +5,15 @@ import Logo from '../../assets/logo.png';
 import { FaUserAlt } from 'react-icons/fa';
 import { SidePanel, Size } from './SidePanel';
 import { routes } from '../../routes/routes';
-import { NavLink } from 'react-router-dom';
+import {NavLink, useNavigate} from 'react-router-dom';
 import { useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 
 export const NavBar = () => {
 
-  const [isShowSidePanel, setIsShowSidePanel] = useState(false);
+  const navigate = useNavigate();
 
+  const [isShowSidePanel, setIsShowSidePanel] = useState(false);
 
   const onShowSidePanel = () => {
     setIsShowSidePanel(true);
@@ -22,6 +23,10 @@ export const NavBar = () => {
     setIsShowSidePanel(false);
   }
 
+  const onLogin = () => {
+    navigate('/register');
+  }
+
   return (
     <div className='max-h-12 max-w-screen overflow-hidden'>
       <div className='h-12 w-full px-4 flex justify-between bg-white rounded-b items-center rounded-l-lg rounded-b-lg'>
@@ -29,7 +34,7 @@ export const NavBar = () => {
         <div>
           <img className='h-9' src={Logo} alt='logo' />
         </div>
-        <IconButton icon={FaUserAlt} onClick={() => {}} variant={Variant.SECONDARY} />
+        <IconButton icon={FaUserAlt} onClick={onLogin} variant={Variant.SECONDARY} />
       </div>
       {
         isShowSidePanel && (

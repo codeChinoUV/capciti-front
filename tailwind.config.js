@@ -25,7 +25,9 @@ module.exports = {
       facebook: '#3B5998',
       facebookDisable: '#CDD2D6',
       google: '#DB4437',
-      success: '#00B374'
+      success: '#00B374',
+      gray: '#F5F6F7',
+      footer: '#CDD2D6'
     },
     extend: {},
   },

@@ -33,7 +33,7 @@ interface SidePanelPropsI {
 export const SidePanel = ({isShow, children, size = Size.SMALL}: SidePanelPropsI) => {
   return (
     <>
-      <div className={classNames('absolute top-0 right-0 bg-white rounded-t-lg rounded-l-lg z-20 h-full py-10 px-7 ' +
+      <div className={classNames('absolute top-0 left-0 bg-white rounded-r-lg z-20 h-full py-10 px-7 ' +
         'ease-in-out duration-300',
         MAP_SIZES[size],
         isShow ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none')}>

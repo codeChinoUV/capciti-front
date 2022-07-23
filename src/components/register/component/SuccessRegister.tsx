@@ -1,7 +1,11 @@
 import {BsCheckCircleFill} from "react-icons/bs";
 import {Button, Size, Variant} from "../../common/Button";
 
-export const SuccessRegister = () => {
+interface SuccessRegisterPropsI {
+  onClose: () => void;
+}
+
+export const SuccessRegister = ({onClose}: SuccessRegisterPropsI) => {
   return (
     <div className='flex-1 bg-white rounded-t-lg rounded-r-lg px-5 py-10 flex flex-col justify-between h-full '>
       <div className='flex flex-col justify-between items-center h-full'>
@@ -11,7 +15,7 @@ export const SuccessRegister = () => {
           <p className='text-primary font-semibold mt-5'>¡Registro exitoso!</p>
         </div>
         <div className='flex w-full'>
-          <Button onClick={() => {}} text='Continuar' size={Size.FULL} variant={Variant.SUCCESS}/>
+          <Button onClick={onClose} text='Continuar' size={Size.FULL} variant={Variant.SUCCESS}/>
         </div>
       </div>
     </div>

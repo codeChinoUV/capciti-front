@@ -40,14 +40,6 @@ export interface RouteI {
 
 export const routes: RouteI[] = [
   {
-    to: '/',
-    path: '',
-    name: 'Login',
-    loginRequired: false,
-    Component: LoginScreen,
-    showInNavbar: false,
-  },
-  {
     to: '/register',
     path: 'register',
     name: 'Register',
@@ -57,10 +49,10 @@ export const routes: RouteI[] = [
   },
 
   {
-    to: '/home',
-    path: 'home/*',
+    to: '/',
+    path: '',
     name: 'Home',
-    loginRequired: true,
+    loginRequired: false,
     Component: HomeScreen,
     allowedRoles: [ Roles.ALL ],
     showInNavbar: true
